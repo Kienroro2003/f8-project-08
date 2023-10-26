@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,23 +32,8 @@
     <link rel="stylesheet" href="./assets/css/main.css" />
     <title>Grocery Mart</title>
 
-    <!-- Script -->
-    <script>
-      function load(selector, path) {
-        const cached = localStorage.getItem(path);
-        if (cached) {
-          document.querySelector(selector).innerHTML = cached;
-        }
-
-        fetch(path)
-          .then((res) => res.text())
-          .then((html) => {
-            if (html !== cached) {
-              document.querySelector(selector).innerHTML = html;
-              localStorage.setItem(path, html);
-            }
-          });
-      }
+    <!-- Scripts -->
+    <script src="./assets/js/script.js"></script>
     </script>
   </head>
   <body>
@@ -64,4 +49,5 @@
       </script>
     </div>
   </body>
+  <script src="./assets/js/script.js"></script>
 </html>
