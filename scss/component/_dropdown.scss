@@ -1,7 +1,7 @@
 @use "../abstracts";
 
 .dropdown {
-  // display: none;
+  display: none;
   position: absolute;
   left: 0;
 
@@ -9,6 +9,16 @@
   padding: 54px 0 0;
 
   width: min(1240px, 100%);
+  @include abstracts.breakpoints(xl) {
+    display: none;
+  }
+
+  @include abstracts.breakpoints(lg) {
+    display: none;
+    position: initial;
+    padding-top: 10px;
+  }
+
   &__inner {
     --inner-padding: 30px;
     position: relative;
@@ -29,12 +39,33 @@
     .top-menu {
       position: relative;
 
+      > .sub-menu {
+        display: block;
+      }
+
       &__main {
         --main-column-width: 292px;
         border-right: 1px solid var(--top-menu-border-color);
         width: var(--main-column-width);
         height: calc(min(582px, 100vh - 154px) - 2 * var(--inner-padding));
         overflow-y: auto;
+
+        @include abstracts.breakpoints(lg) {
+          width: 100%;
+          border: none;
+          // height: auto;
+        }
+      }
+    }
+
+    @include abstracts.breakpoints(lg) {
+      border-radius: none;
+      background-color: transparent;
+      box-shadow: none;
+      padding: 0;
+
+      &::before {
+        content: none;
       }
     }
   }
@@ -51,9 +82,6 @@
 
     flex-shrink: 0;
 
-    @include abstracts.breakpoints(xl) {
-      display: none;
-    }
     &-2 {
       position: absolute;
       right: 0;
@@ -79,6 +107,10 @@
     display: flex;
     flex-flow: column nowrap;
 
+    @include abstracts.breakpoints(lg) {
+      margin-top: 0;
+    }
+
     li {
       &:first-of-type {
         > .menu-column__link {
@@ -98,7 +130,7 @@
         font-weight: 500;
       }
       > .sub-menu {
-        display: grid;
+        display: block;
       }
     }
   }
@@ -118,6 +150,19 @@
   grid-template-columns: repeat(3, 1fr);
   padding-left: var(--inner-padding);
   overflow-y: auto;
+  &--not-main {
+    position: initial;
+    display: grid;
+    height: calc(min(582px, 100vh - 154px) - 2 * var(--inner-padding));
+    grid-template-columns: repeat(4, 1fr);
+    overflow-y: auto;
+  }
+
+  @include abstracts.breakpoints(lg) {
+    position: initial;
+    padding: 7px 0 0;
+    display: none;
+  }
 }
 
 .sub-menu div.menu-column + div.menu-column {

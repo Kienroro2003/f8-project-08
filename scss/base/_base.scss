@@ -8,8 +8,6 @@ html {
   font-size: 62.5%;
 }
 
-
-
 body {
   background-color: var(--background-color);
   font-family: "Gordita", sans-serif;
@@ -28,12 +26,15 @@ button {
   outline: none;
 }
 
+a,
 button,
 input,
 textarea,
+img,
 select {
   font-family: inherit;
   color: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .icon {

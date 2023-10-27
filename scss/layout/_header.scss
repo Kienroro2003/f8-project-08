@@ -36,27 +36,69 @@
 .navbar {
   margin-left: 144px;
 
+  &__close-btn {
+    display: none;
+
+    @include abstracts.breakpoints(lg) {
+      display: block;
+      padding: 0 0 10px;
+    }
+  }
+
   @include abstracts.breakpoints(xl) {
     margin-left: 50px;
   }
 
   @include abstracts.breakpoints(lg) {
-    display: none;
+    // display: none;
+    position: fixed;
+    inset: 0 50% 0 0;
+    z-index: 9;
+    background-color: var(--header-bg-color);
+    margin-left: 0;
+    padding: 20px;
+
+    translate: -100%;
+
+    transition: translate 0.5s ease;
+
+    &.show {
+      translate: 0;
+    }
+
+    &.show + &__overlay {
+      visibility: visible;
+      opacity: 1;
+    }
   }
 
   &__list {
     @extend %flexItemsCenter;
+    @include abstracts.breakpoints(lg) {
+      flex-flow: column nowrap;
+      align-items: flex-start;
+    }
   }
 
   &__item {
     &:hover .dropdown {
       display: block;
     }
+
+    @include abstracts.breakpoints(lg) {
+      &:hover .dropdown {
+        // display: none;
+      }
+    }
     &:first-child a {
       padding-left: 0;
     }
     &:last-child a {
       padding-right: 0;
+    }
+
+    @include abstracts.breakpoints(lg) {
+      width: 100%;
     }
   }
 
@@ -68,10 +110,34 @@
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 146.667%;
+
+    @include abstracts.breakpoints(lg) {
+      padding: 10px 0;
+      justify-content: space-between;
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: 150%;
+    }
   }
 
   &__arrow {
     margin-top: 3px;
+    @include abstracts.breakpoints(lg) {
+      rotate: -90deg;
+    }
+  }
+
+  &__overlay {
+    visibility: hidden;
+    opacity: 0;
+
+    @include abstracts.breakpoints(lg) {
+      transition: visibility, opacity 0.25s linear;
+      position: fixed;
+      z-index: 8;
+      inset: 0;
+      background-color: #00000070;
+    }
   }
 }
 

@@ -4,8 +4,8 @@ html {
   --background-color: #f6f6f6;
 
   --text-color: #1a162e;
-  --icon-color: brightness(0) saturate(100%) invert(7%) sepia(15%)
-    saturate(3107%) hue-rotate(215deg) brightness(96%) contrast(95%);
+  --icon-color: brightness(0) saturate(100%) invert(7%) sepia(15%) saturate(3107%) hue-rotate(215deg) brightness(96%)
+    contrast(95%);
 
   --header-bg-color: #eee;
   --top-act-group-bg-color: #fff;
@@ -16,11 +16,15 @@ html {
     --header-bg-color: #fff;
   }
 
+  @include abstracts.breakpoints(lg) {
+    --header-bg-color: #fff;
+  }
+
   // Dropdown
   --dropdown-bg-color: #fff;
   --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
   --top-menu-border-color: #d2d1d6;
   --text-menu-hover: #0071dc;
-  --dropdown-icon-color: brightness(0) saturate(100%) invert(7%) sepia(15%)
-    saturate(3107%) hue-rotate(215deg) brightness(96%) contrast(95%);
+  --dropdown-icon-color: brightness(0) saturate(100%) invert(7%) sepia(15%) saturate(3107%) hue-rotate(215deg)
+    brightness(96%) contrast(95%);
 }
