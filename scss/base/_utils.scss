@@ -4,7 +4,6 @@ $breakpoints: (
   lg: 992px,
   md: 768px,
   sm: 576px,
-  xs: 0,
 );
 $display-values: block, flex, grid, none;
 
@@ -16,6 +15,8 @@ $display-values: block, flex, grid, none;
     }
   }
 }
+
+@include make-display();
 
 @each $breakpoint, $dimension in $breakpoints {
   @media (max-width: ($dimension - 0.02)) {

@@ -42,12 +42,31 @@
       load("#header", "./template/header.html");
     </script>
     <div class="container">
-      <h2>Sign up</h2>
-      <footer id="footer"></footer>
-      <script>
-        load("#footer", "./template/footer.html");
-      </script>
+      <div class="slideshow">
+        <div class="slideshow__inner">
+          <div class="slideshow__item">
+            <img src="./assets/images/item-1.png" alt="" class="slideshow__img">
+          </div>
+          <div class="slideshow__item">
+            <img src="./assets/images/item-1.png" alt="" class="slideshow__img">
+          </div>
+          <div class="slideshow__item">
+            <img src="./assets/images/item-1.png" alt="" class="slideshow__img">
+          </div>
+        </div>
+
+        <div class="slideshow__page">
+          <span class="slideshow__num">1</span>
+          <div class="slideshow__slider"></div>
+          <div class="slideshow__num">5</div>
+        </div>
+      </div>
+      
     </div>
+    <footer id="footer"></footer>
+    <script>
+      load("#footer", "./template/footer.html");
+    </script>
   </body>
   <script src="./assets/js/script.js"></script>
 </html>

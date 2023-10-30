@@ -14,8 +14,20 @@
     <nav id="navbar" class="navbar show">
       <!-- Navbar close -->
       <button class="navbar__close-btn js-toggle" toggle-target="#navbar">
-        <img src="./assets/icons/arrow-left.svg" alt="" class="navbar__close-btn__icon" />
+        <img src="./assets/icons/arrow-left.svg" alt="" class="navbar__close-btn__icon icon" />
       </button>
+
+      <a href="#!" class="nav-btn d-none d-md-flex">
+        <img src="./assets/icons/cart.svg" alt="" class="nav-btn__icon icon" />
+        <span class="nav-btn__title">Card</span>
+        <span class="nav-btn__qnt">3</span>
+      </a>
+
+      <a href="#!" class="nav-btn d-none d-md-flex">
+        <img src="./assets/icons/heart.svg" alt="" class="nav-btn__icon icon" />
+        <span class="nav-btn__title">Favorite</span>
+        <span class="nav-btn__qnt">3</span>
+      </a>
 
       <ul class="navbar__list js-dropdown-list">
         <li class="navbar__item">
@@ -24,7 +36,7 @@
             <img src="../assets/icons/arrow_down.svg" alt="" class="icon navbar__arrow" />
           </a>
           <!-- Dropdown -->
-          <div class="dropdown">
+          <div class="dropdown js-dropdown">
             <div class="dropdown__inner">
               <div class="top-menu">
                 <div class="top-menu__main">
@@ -3273,7 +3285,7 @@
             <img src="../assets/icons/arrow_down.svg" alt="" class="icon navbar__arrow" />
           </a>
           <!-- Dropdown -->
-          <div class="dropdown">
+          <div class="dropdown js-dropdown">
             <div class="dropdown__inner">
               <div class="top-menu">
                 <!-- Sub menu -->
@@ -3562,7 +3574,7 @@
             <img src="./assets/icons/arrow_down.svg" alt="" class="icon navbar__arrow" />
           </a>
           <!-- Dropdown -->
-          <div class="dropdown">
+          <div class="dropdown js-dropdown">
             <div class="dropdown__inner">
               <div class="top-menu">
                 <!-- Sub menu -->
