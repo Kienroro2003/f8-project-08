@@ -9,11 +9,11 @@
   padding: 54px 0 0;
 
   width: min(1240px, 100%);
-  @include abstracts.breakpoints(xl) {
+  @include abstracts.screen(xl) {
     display: none;
   }
 
-  @include abstracts.breakpoints(lg) {
+  @include abstracts.screen(lg) {
     display: none;
     position: initial;
     padding-top: 10px;
@@ -41,7 +41,7 @@
 
       > .sub-menu {
         display: grid;
-        @include abstracts.breakpoints(lg) {
+        @include abstracts.screen(lg) {
           display: block;
         }
       }
@@ -53,7 +53,7 @@
         height: calc(min(582px, 100vh - 154px) - 2 * var(--inner-padding));
         overflow-y: auto;
 
-        @include abstracts.breakpoints(lg) {
+        @include abstracts.screen(lg) {
           width: 100%;
           border: none;
           height: auto;
@@ -61,7 +61,7 @@
       }
     }
 
-    @include abstracts.breakpoints(lg) {
+    @include abstracts.screen(lg) {
       border-radius: none;
       background-color: transparent;
       box-shadow: none;
@@ -110,7 +110,7 @@
     display: flex;
     flex-flow: column nowrap;
 
-    @include abstracts.breakpoints(lg) {
+    @include abstracts.screen(lg) {
       margin-top: 0;
     }
 
@@ -134,7 +134,7 @@
       }
       > .sub-menu {
         display: grid;
-        @include abstracts.breakpoints(lg) {
+        @include abstracts.screen(lg) {
           display: block;
         }
       }
@@ -162,16 +162,16 @@
     height: calc(min(582px, 100vh - 154px) - 2 * var(--inner-padding));
     grid-template-columns: repeat(4, 1fr);
     overflow-y: auto;
-    @include abstracts.breakpoints(lg) {
+    @include abstracts.screen(lg) {
       height: auto;
     }
 
-    // @include abstracts.breakpoints(sm) {
+    // @include abstracts.screen(sm) {
     //   height: calc(100vh - 200px);
     // }
   }
 
-  @include abstracts.breakpoints(lg) {
+  @include abstracts.screen(lg) {
     position: initial;
     padding: 7px 0 0;
     display: none;

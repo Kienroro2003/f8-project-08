@@ -12,11 +12,11 @@ html {
   --top-act-group-separate-color: #ededf6;
   --box-shadow-color: rgba(237, 237, 246, 0.2);
 
-  @include abstracts.breakpoints(md) {
+  @include abstracts.screen(md) {
     --header-bg-color: #fff;
   }
 
-  @include abstracts.breakpoints(lg) {
+  @include abstracts.screen(lg) {
     --header-bg-color: #fff;
   }
 
@@ -27,4 +27,10 @@ html {
   --text-menu-hover: #0071dc;
   --dropdown-icon-color: brightness(0) saturate(100%) invert(7%) sepia(15%) saturate(3107%) hue-rotate(215deg)
     brightness(96%) contrast(95%);
+
+  //Cate item
+  --cate-item-background: #eee;
+  --cate-item-thumb-bg: #fff;
+  --cate-item-title: #000;
+  --cate-item-md-background: #fff;
 }
