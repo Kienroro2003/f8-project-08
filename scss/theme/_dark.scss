@@ -1,3 +1,4 @@
+@use "../abstracts";
 html.dark {
   --background-color: #292e39;
   --text-color: #ffffff;
@@ -23,4 +24,18 @@ html.dark {
   --cate-item-thumb-bg: #292e39;
   --cate-item-title: #fff;
   --cate-item-md-background: #171c28;
+
+  //Filter button
+  --filter-btn-bg: #171c28;
+  --filter-text-color: #fff;
+  @include abstracts.screen(md) {
+    --filter-text-color: #fff;
+  }
+
+  //Like button
+  --like-btn-bg: #292e39;
+
+  //Product card
+  --product-card-bg: #171c28;
+  --product-card-shadow: rgba(0, 0, 0, 0.2);
 }

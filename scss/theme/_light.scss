@@ -33,4 +33,18 @@ html {
   --cate-item-thumb-bg: #fff;
   --cate-item-title: #000;
   --cate-item-md-background: #fff;
+
+  //Filter button
+  --filter-btn-bg: #fff;
+  --filter-text-color: #6c6c72;
+  @include abstracts.screen(md) {
+    --filter-text-color: #1a162e;
+  }
+
+  //Like button
+  --like-btn-bg: #fff;
+
+  //Product card
+  --product-card-bg: #fff;
+  --product-card-shadow: rgba(237, 237, 246, 0.2);
 }
