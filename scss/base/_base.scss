@@ -34,8 +34,10 @@ input,
 textarea,
 img,
 select {
+  outline: none;
   font-family: inherit;
   color: inherit;
+  border: none;
   -webkit-tap-highlight-color: transparent;
 }
 
