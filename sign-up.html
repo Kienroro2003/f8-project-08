@@ -1,27 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/favicon//favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/favicon//favicon-16x16.png"
-    />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon//favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon//favicon-16x16.png" />
     <link rel="manifest" href="assets/favicon/site.webmanifest" />
-    <link
-      rel="mask-icon"
-      href="assets/favicon/safari-pinned-tab.svg"
-      color="#5bbad5"
-    />
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
 
@@ -32,34 +18,72 @@
     <link rel="stylesheet" href="./assets/css/main.css" />
     <title>Grocery Mart</title>
 
-    <!-- Script -->
-    <script>
-      function load(selector, path) {
-        const cached = localStorage.getItem(path);
-        if (cached) {
-          document.querySelector(selector).innerHTML = cached;
-        }
-
-        fetch(path)
-          .then((res) => res.text())
-          .then((html) => {
-            if (html !== cached) {
-              document.querySelector(selector).innerHTML = html;
-              localStorage.setItem(path, html);
-            }
-          });
-      }
-    </script>
+    <!-- Scripts -->
+    <script src="./assets/js/script.js"></script>
   </head>
   <body>
-    <header id="header"></header>
-    <script>
-      load("#header", "./template/header.html");
-    </script>
-    <h2>Sign up</h2>
-    <footer id="footer"></footer>
-    <script>
-      load("#footer", "./template/footer.html");
-    </script>
+    <main class="auth">
+      <div class="auth__intro">
+        <div class="auth__intro-block">
+          <img src="./assets/images/auth/auth.svg" alt="" class="auth__intro-img" />
+          <p class="auth__intro-desc">
+            The best of luxury brand values, high quality products, and innovative services
+          </p>
+        </div>
+      </div>
+      <div class="auth__content">
+        <div class="auth__content--inner">
+          <!-- Logo -->
+          <a href="./" class="logo">
+            <img src="./assets/icons/logo.svg" alt="grocerymart" class="logo__img" />
+            <h1 class="logo__title">grocerymart</h1>
+          </a>
+          <h1 class="auth__heading">Sign Up</h1>
+          <p class="auth__desc">Let’s create your account and Shop like a pro and save money.</p>
+          <form action="" class="auth__form form">
+            <div class="auth__form--content">
+              <!-- Form group 1 -->
+              <div class="form__group">
+                <div class="form__text-input">
+                  <input type="email" name="" id="" placeholder="Email" class="form__input" />
+                  <img src="./assets/icons/Message.svg" alt="" class="form__input-icon" />
+                </div>
+              </div>
+              <!-- Form group 2 -->
+              <div class="form__group">
+                <div class="form__text-input">
+                  <input type="password" name="" id="" placeholder="Password" class="form__input" />
+                  <img src="./assets/icons/Lock.svg" alt="" class="form__input-icon" />
+                </div>
+              </div>
+              <!-- Form group 3 -->
+              <div class="form__group">
+                <div class="form__text-input">
+                  <input type="password" name="" id="" placeholder="Confirm Password" class="form__input" />
+                  <img src="./assets/icons/Lock.svg" alt="" class="form__input-icon" />
+                </div>
+              </div>
+              <!-- Form group 4 -->
+              <div class="form__group form__group--inline">
+                <input type="checkbox" name="" id="form__checkbox" class="form__checkbox" />
+                <label for="form__checkbox" class="form__text form__label-checkbox">Set as default card</label>
+                <a href="#!" class="auth__link form__text">Recovery Password</a>
+              </div>
+            </div>
+            <div class="auth__form--act">
+              <button class="btn btn--primary auth__btn">Sign Up</button>
+              <button class="btn btn--outline auth__btn btn--no-margin">
+                <img src="./assets/icons/google-line.svg" alt="" class="btn__icon" />
+                Sign in with Gmail
+              </button>
+            </div>
+          </form>
+          <p class="auth__text">
+            You have an account yet?
+            <a href="./sign-in.html" class="auth__link">Sign In</a>
+          </p>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
