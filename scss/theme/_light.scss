@@ -12,6 +12,8 @@ html {
   --top-act-group-separate-color: #ededf6;
   --box-shadow-color: rgba(237, 237, 246, 0.2);
 
+  --footer-bg-color: var(--header-bg-color);
+
   @include abstracts.screen(md) {
     --header-bg-color: #fff;
   }
