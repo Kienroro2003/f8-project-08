@@ -5,12 +5,26 @@
   grid-template-columns: 1fr 1fr;
   min-height: 100vh;
   background-color: var(--auth-bg);
+
+  @include abstracts.screen(md) {
+    grid-template-columns: 1fr;
+  }
+  &__intro,
+  &__content {
+    padding: 0 10px;
+  }
   &__intro {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    @include abstracts.screen(md) {
+      padding-top: 80px;
+      padding-bottom: 50px;
+      justify-content: space-between;
+    }
     &-block {
-      width: 422px;
+      max-width: 422px;
       margin: 0 auto;
       display: flex;
       flex-flow: column nowrap;
@@ -19,6 +33,7 @@
 
     &-img {
       margin-bottom: 49px;
+      max-width: 100%;
     }
 
     &-desc {
@@ -33,14 +48,31 @@
     background-color: var(--auth-content);
     display: flex;
     justify-content: center;
-    padding: 50px 0;
+
+    @include abstracts.screen(md) {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      transition: translate 0.25s linear;
+      overflow-y: auto;
+      &.hide {
+        translate: 100% 0;
+      }
+      &.show {
+        translate: 0 0;
+      }
+    }
 
     &--inner {
       display: flex;
       flex-flow: column nowrap;
       justify-content: center;
       align-items: center;
-      width: min(460px, 100%);
+      padding: 50px 10px;
+
+      //   @include abstracts.screen(md) {
+      //     overflow-y: auto;
+      //   }
     }
   }
 
@@ -72,7 +104,7 @@
     &--content {
       display: flex;
       flex-flow: column nowrap;
-      gap: 20px 0;
+      gap: 30px 0;
     }
 
     &--act {
