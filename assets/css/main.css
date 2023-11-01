@@ -2103,6 +2103,10 @@ html {
 .form__checkbox {
   display: none;
 }
+.form__checkbox:checked + .form__label-checkbox::before {
+  background-color: #ffb700;
+  border-color: transparent;
+}
 .form__checkbox:checked + .form__label-checkbox::after {
   visibility: visible;
   opacity: 1;
@@ -2124,15 +2128,17 @@ html {
 .form__label-checkbox::after {
   content: "";
   position: absolute;
+  left: 3px;
   top: 50%;
-  left: 5px;
-  translate: 0 -60%;
-  width: 10px;
+  translate: 0 -80%;
+  width: 15px;
   height: 10px;
+  border-left: 3px solid #fff;
+  border-bottom: 3px solid #fff;
   border-radius: 2px;
-  background-color: #000;
   visibility: hidden;
   opacity: 0;
+  rotate: 306deg;
 }
 .form__text-input {
   border: 1px solid var(--form-group-border);
